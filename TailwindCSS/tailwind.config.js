@@ -1,6 +1,6 @@
 
 module.exports = {
-    content: [],
+    content: ['../Pages/**/*.{razor,cshtml}'],
     darkMode: false,
     theme: {
         extend: {},

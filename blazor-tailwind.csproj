@@ -9,7 +9,7 @@
   </PropertyGroup>
   
   <Target Name="CheckForNpm" BeforeTargets="NpmInstall">
-    <Exec Command="npm -v" ContinueOnError="true">
+    <Exec Command="npm --version" ContinueOnError="true">
       <Output TaskParameter="ExitCode" PropertyName="ErrorCode"/>
     </Exec>
     <OnError Condition="'$(ErrorCode)' != '0'" ExecuteTargets="$('Ensure that NPM is installed!')" />
